@@ -9,6 +9,9 @@ pipeline {
             CI = 'true'
         }
     stages {
+        stage{
+            steps{git 'https://github.com/pradyumn12j/simple-node-js-react-npm-app.git'}
+        }
         stage('Build') {
             steps {
                 sh 'npm install'
