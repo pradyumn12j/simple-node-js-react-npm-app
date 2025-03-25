@@ -1,13 +1,6 @@
 pipeline {
-    agent {
-        docker {
-            image 'node:6-alpine'
-            args '-p 3000:3000'
-        }
-    }
-     environment {
-            CI = 'true'
-        }
+    agentany 
+        
     stages {
         stage{
             steps{git 'https://github.com/pradyumn12j/simple-node-js-react-npm-app.git'}
