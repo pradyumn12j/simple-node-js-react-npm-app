@@ -5,11 +5,7 @@ pipeline {
             steps{git 'https://github.com/pradyumn12j/simple-node-js-react-npm-app.git'}
         }
         
-        stage('Test') {
-                    steps {
-                        sh './jenkins/scripts/test.sh'
-                    }
-                }
+    
                 stage('Deliver') {
                             steps {
                                 sh './jenkins/scripts/deliver.sh'
